@@ -32,9 +32,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnInsertar = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
-            this.txtPosicion = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,16 +41,14 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtCosto = new System.Windows.Forms.TextBox();
-            this.bttnInvertirLista = new System.Windows.Forms.Button();
             this.bttnListarInvertido = new System.Windows.Forms.Button();
             this.bttnEliminarPrimero = new System.Windows.Forms.Button();
             this.bttnEliminarUltimo = new System.Windows.Forms.Button();
-            this.bttnAgregarPrimero = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtResultado
             // 
-            this.txtResultado.Location = new System.Drawing.Point(26, 217);
+            this.txtResultado.Location = new System.Drawing.Point(26, 172);
             this.txtResultado.Multiline = true;
             this.txtResultado.Name = "txtResultado";
             this.txtResultado.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -61,7 +57,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(226, 15);
+            this.btnAgregar.Location = new System.Drawing.Point(226, 12);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 32);
             this.btnAgregar.TabIndex = 1;
@@ -71,7 +67,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(226, 49);
+            this.btnBuscar.Location = new System.Drawing.Point(226, 50);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 30);
             this.btnBuscar.TabIndex = 2;
@@ -81,7 +77,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(226, 124);
+            this.btnEliminar.Location = new System.Drawing.Point(226, 86);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 31);
             this.btnEliminar.TabIndex = 3;
@@ -89,32 +85,15 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // btnInsertar
-            // 
-            this.btnInsertar.Location = new System.Drawing.Point(226, 87);
-            this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(75, 31);
-            this.btnInsertar.TabIndex = 4;
-            this.btnInsertar.Text = "Insertar";
-            this.btnInsertar.UseVisualStyleBackColor = true;
-            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
-            // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(64, 161);
+            this.btnListar.Location = new System.Drawing.Point(226, 123);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(75, 31);
             this.btnListar.TabIndex = 5;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
-            // 
-            // txtPosicion
-            // 
-            this.txtPosicion.Location = new System.Drawing.Point(307, 96);
-            this.txtPosicion.Name = "txtPosicion";
-            this.txtPosicion.Size = new System.Drawing.Size(105, 22);
-            this.txtPosicion.TabIndex = 6;
             // 
             // lblCodigo
             // 
@@ -180,19 +159,9 @@
             this.txtCosto.Size = new System.Drawing.Size(135, 22);
             this.txtCosto.TabIndex = 11;
             // 
-            // bttnInvertirLista
-            // 
-            this.bttnInvertirLista.Location = new System.Drawing.Point(307, 53);
-            this.bttnInvertirLista.Name = "bttnInvertirLista";
-            this.bttnInvertirLista.Size = new System.Drawing.Size(156, 31);
-            this.bttnInvertirLista.TabIndex = 26;
-            this.bttnInvertirLista.Text = "Invertir Lista";
-            this.bttnInvertirLista.UseVisualStyleBackColor = true;
-            this.bttnInvertirLista.Click += new System.EventHandler(this.bttnInvertirLista_Click);
-            // 
             // bttnListarInvertido
             // 
-            this.bttnListarInvertido.Location = new System.Drawing.Point(145, 161);
+            this.bttnListarInvertido.Location = new System.Drawing.Point(307, 124);
             this.bttnListarInvertido.Name = "bttnListarInvertido";
             this.bttnListarInvertido.Size = new System.Drawing.Size(156, 31);
             this.bttnListarInvertido.TabIndex = 25;
@@ -202,7 +171,7 @@
             // 
             // bttnEliminarPrimero
             // 
-            this.bttnEliminarPrimero.Location = new System.Drawing.Point(307, 124);
+            this.bttnEliminarPrimero.Location = new System.Drawing.Point(307, 49);
             this.bttnEliminarPrimero.Name = "bttnEliminarPrimero";
             this.bttnEliminarPrimero.Size = new System.Drawing.Size(156, 31);
             this.bttnEliminarPrimero.TabIndex = 24;
@@ -212,7 +181,7 @@
             // 
             // bttnEliminarUltimo
             // 
-            this.bttnEliminarUltimo.Location = new System.Drawing.Point(307, 161);
+            this.bttnEliminarUltimo.Location = new System.Drawing.Point(307, 87);
             this.bttnEliminarUltimo.Name = "bttnEliminarUltimo";
             this.bttnEliminarUltimo.Size = new System.Drawing.Size(156, 31);
             this.bttnEliminarUltimo.TabIndex = 23;
@@ -220,26 +189,14 @@
             this.bttnEliminarUltimo.UseVisualStyleBackColor = true;
             this.bttnEliminarUltimo.Click += new System.EventHandler(this.bttnEliminarUltimo_Click);
             // 
-            // bttnAgregarPrimero
-            // 
-            this.bttnAgregarPrimero.Location = new System.Drawing.Point(307, 16);
-            this.bttnAgregarPrimero.Name = "bttnAgregarPrimero";
-            this.bttnAgregarPrimero.Size = new System.Drawing.Size(156, 31);
-            this.bttnAgregarPrimero.TabIndex = 22;
-            this.bttnAgregarPrimero.Text = "Agregar primero";
-            this.bttnAgregarPrimero.UseVisualStyleBackColor = true;
-            this.bttnAgregarPrimero.Click += new System.EventHandler(this.bttnAgregarPrimero_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 494);
-            this.Controls.Add(this.bttnInvertirLista);
+            this.ClientSize = new System.Drawing.Size(469, 437);
             this.Controls.Add(this.bttnListarInvertido);
             this.Controls.Add(this.bttnEliminarPrimero);
             this.Controls.Add(this.bttnEliminarUltimo);
-            this.Controls.Add(this.bttnAgregarPrimero);
             this.Controls.Add(this.txtCosto);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtNombre);
@@ -248,9 +205,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblCodigo);
-            this.Controls.Add(this.txtPosicion);
             this.Controls.Add(this.btnListar);
-            this.Controls.Add(this.btnInsertar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnAgregar);
@@ -268,9 +223,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnInsertar;
         private System.Windows.Forms.Button btnListar;
-        private System.Windows.Forms.TextBox txtPosicion;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -279,11 +232,9 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox txtCosto;
-        private System.Windows.Forms.Button bttnInvertirLista;
         private System.Windows.Forms.Button bttnListarInvertido;
         private System.Windows.Forms.Button bttnEliminarPrimero;
         private System.Windows.Forms.Button bttnEliminarUltimo;
-        private System.Windows.Forms.Button bttnAgregarPrimero;
     }
 }
 

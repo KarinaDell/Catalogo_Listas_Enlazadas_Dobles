@@ -23,13 +23,10 @@ namespace Catalogo_Karina
             if (t._siguiente != null)
                 agregar(nuevo, t._siguiente);
             else
+            {
                 t._siguiente = nuevo;
-        }
-
-        public void AgregarInicio(Producto nuevo)
-        {
-            nuevo._siguiente = primero;
-            primero = nuevo;
+                nuevo._anterior = t;
+            }
         }
 
         public Producto Buscar(int _codigo)
@@ -63,7 +60,10 @@ namespace Catalogo_Karina
         private void eliminar(int _codigo, Producto t)
         {
             if (_codigo == t._siguiente.Codigo)
+            {
                 t._siguiente = t._siguiente._siguiente;
+                t._siguiente._anterior = t;
+            }
             else
                 eliminar(_codigo, t._siguiente);
         }
@@ -85,26 +85,6 @@ namespace Catalogo_Karina
                 t._siguiente = null;
             else
                 eliminarUltimo(t._siguiente);
-        }
-
-        public void Insertar(Producto nuevo, int posicion)
-        {
-            int cont = 1;
-            Producto producto = primero;
-            if (posicion == 1)
-            {
-                AgregarInicio(nuevo);
-            }
-            else
-            {
-                while (cont != posicion - 1)
-                {
-                    producto = producto._siguiente;
-                    cont++;
-                }
-                nuevo._siguiente = producto._siguiente;
-                producto._siguiente = nuevo;
-            }
         }
 
         public string Listar()
@@ -133,50 +113,6 @@ namespace Catalogo_Karina
                 return reporteInverso(t._siguiente) + t.ToString() + Environment.NewLine;
             else
                 return t.ToString() + Environment.NewLine;
-        }
-
-        public void InvertirLista()
-        {
-            Producto newInicio = getNewInicio();
-            Producto producto = newInicio;
-            while (primero._siguiente != null)
-            {
-                while (producto._siguiente != null)
-                    producto = producto._siguiente;
-                producto._siguiente = getUltimo();
-            }
-            eliminarInicio(newInicio);
-        }
-
-        private Producto getNewInicio()
-        {
-            Producto producto = primero;
-            Producto newInicio = null;
-            while (producto._siguiente._siguiente != null)
-                producto = producto._siguiente;
-            newInicio = producto._siguiente;
-            producto._siguiente = null;
-            return newInicio;
-        }
-
-        private Producto getUltimo()
-        {
-            Producto producto = primero;
-            Producto productoDos = primero;
-            while (producto._siguiente._siguiente != null)
-                producto = producto._siguiente;
-            productoDos = producto._siguiente;
-            producto._siguiente = null;
-            return productoDos;
-        }
-
-        private void eliminarInicio(Producto newInicio)
-        {
-            Producto producto = newInicio;
-            while (producto._siguiente != null)
-                producto = producto._siguiente;
-            producto._siguiente = primero;
-            primero = newInicio;
         }
     }
 }

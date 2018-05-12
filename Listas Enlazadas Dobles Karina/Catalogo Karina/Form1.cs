@@ -33,14 +33,6 @@ namespace Catalogo_Karina
             txtResultado.Text = catalogo.Buscar(Convert.ToInt32(txtCodigo.Text)).ToString();
         }
 
-        private void btnInsertar_Click(object sender, EventArgs e)
-        {
-            producto = new Producto(Convert.ToInt32(txtCodigo.Text), txtNombre.Text, Convert.ToInt32(txtCantidad.Text), Convert.ToDouble(txtCosto.Text));
-            catalogo.Insertar(producto, Convert.ToInt32(txtPosicion.Text));
-            txtCodigo.Text = txtNombre.Text = txtCantidad.Text = txtCosto.Text = "";
-            txtCodigo.Focus();
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             catalogo.Eliminar(Convert.ToInt32(txtCodigo.Text));
@@ -54,17 +46,6 @@ namespace Catalogo_Karina
         private void bttnEliminarPrimero_Click(object sender, EventArgs e)
         {
             catalogo.EliminarPrimero();
-        }
-
-        private void bttnAgregarPrimero_Click(object sender, EventArgs e)
-        {
-            producto = new Producto(Convert.ToInt32(txtCodigo.Text), txtNombre.Text, Convert.ToInt32(txtCantidad.Text), Convert.ToDouble(txtCosto.Text));
-            catalogo.AgregarInicio(producto);
-        }
-
-        private void bttnInvertirLista_Click(object sender, EventArgs e)
-        {
-            catalogo.InvertirLista();
         }
 
         private void bttnEliminarUltimo_Click(object sender, EventArgs e)

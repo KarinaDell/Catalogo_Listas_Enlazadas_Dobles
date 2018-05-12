@@ -13,6 +13,7 @@ namespace Catalogo_Karina
         private int _cantidad;
         private double _costo;
         public Producto _siguiente;
+        public Producto _anterior;
 
         public Producto(int _codigo, string _nombre, int _cantidad, double _costo)
         {
